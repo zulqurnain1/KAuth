@@ -1,0 +1,90 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    // Define versions in a single place
+    ext {
+        // Sdk and tools
+        compileSdkVersion = 29
+        minSdkVersion = 21
+        targetSdkVersion = 29
+        // Build dependencies
+        gradleVersion = '4.1.0'
+        kotlinVersion = '1.4.10'
+        googleServicesVersion = '4.3.2'
+        firebaseCrashylaticsToolsVersion = '2.3.0'
+        // App dependencies
+        appCompatVersion = '1.3.0-alpha02'
+        cardViewVersion = '1.0.0'
+        circularImageViewVersion = '3.1.0'
+        constraintLayoutVersion = '2.0.4'
+        coreVersion = '1.5.0-alpha04'
+        coroutinesVersion = '1.3.9'
+        daggerVersion = "2.27"
+        easyPermissions = "3.0.0"
+        firebaseCrashlyticsVersion = '17.2.2'
+        firebaseAnalyticsVersion = '18.0.0'
+        firebaseCoreVersion = '18.0.0'
+        firebaseMessagingVersion = '21.0.0'
+        firebaseRemoteConfigVersion = "20.0.0"
+        fragmentVersion = '1.3.0-alpha06'
+        glideVersion = '4.10.0'
+        gsonVersion = '2.8.6'
+        imageCompressor = '2.1.0'
+        ktxVersion = '1.3.2'
+        lifecycleVersion = '2.3.0-beta01'
+        lifecycleProcessVersion = '2.2.0'
+        materialDesignVersion = '1.3.0-alpha03'
+        multidexVersion = '2.0.1'
+        okHttpLoggingInterceptorVersion = '4.7.2'
+        playCoreVersion = '1.8.3'
+        playServicesAuthVersion = '18.1.0'
+        playServicesAuthApiPhoneVersion = '17.5.0'
+        playServicesBaseVersion = '17.5.0'
+        playServicesLocationVersion = '17.1.0'
+        playServicesVersion = '17.0.0'
+        recyclerViewVersion = '1.1.0'
+        retrofitVersion = '2.9.0'
+        roomVersion = '2.2.5'
+        rxAndroidVersion = '2.1.1'
+        rxJavaVersion = '2.2.19'
+        timber = '4.7.1'
+        vectorDrawableVersion = '1.1.0'
+        workRuntimeVersion = "2.4.0"
+        viewPager2Version = "1.0.0"
+        toolTipVersion = "1.1.5"
+        imageViewerVersion = "1.0.1"
+        pinViewVersion = '1.4.3'
+        segmentedControls = '1.2.0'
+        debugDBAndroid = '1.0.6'
+        pagingKtxRuntime = '2.1.2'
+        androidSDP = '1.0.6'
+        androidSSP = '1.0.6'
+        advancedWebView = 'v3.0.0'
+        twitter4Core = '4.0.7'
+
+    }
+
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "com.github.dcendents:android-maven-gradle-plugin:1.5"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
